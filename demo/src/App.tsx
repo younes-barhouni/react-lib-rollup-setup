@@ -1,14 +1,12 @@
 import React, {useState} from 'react';
-import {FroalaEditor} from '../../lib';
+import {MyComponent} from '../../lib';
 
-const key = '';
+
 
 export default function App() {
 
-  const [model, setModel] = useState<string>('initial text tito');
+  const [model, setModel] = useState<string>('initial text');
   const config: any = {
-    key,
-    placeholder: 'Edit Me',
   };
 
   /**
@@ -22,9 +20,7 @@ export default function App() {
   };
 
   return (
-    <FroalaEditor
-      tag='textarea'
-      config={config}
+    <MyComponent
       model={model}
       onModelChange={handleModelChange}
     />
